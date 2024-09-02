@@ -20,36 +20,20 @@ export default async function MovieCredits({ id }) {
   console.log(JSON.stringify(credits));
 
   return (
-<<<<<<< HEAD
     <div className={styles.container}>
-      {credits.map(
-        (credit) =>
-          credit.profile_path && (
-            <Credit
-              key={credit.id}
-              path={credit.profile_path}
-              name={credit.name}
-            />
-          )
-      )}
+      <h2>Credits</h2>
+      <div className={styles.credits}>
+        {credits.map(
+          (credit) =>
+            credit.profile_path && (
+              <Credit
+                key={credit.id}
+                profile_path={credit.profile_path}
+                name={credit.name}
+              />
+            )
+        )}
+      </div>
     </div>
-=======
-    <>{JSON.stringify(credits)}</>
-    // <div className={styles.container}>
-    //   <h2>Credits</h2>
-    //   <div className={styles.credits}>
-    //     {credits.map(
-    //       (credit) =>
-    //         credit.profile_path && (
-    //           <Credit
-    //             key={credit.id}
-    //             profile_path={credit.profile_path}
-    //             name={credit.name}
-    //           />
-    //         )
-    //     )}
-    //   </div>
-    // </div>
->>>>>>> parent of fde06d8... update credits
   );
 }
