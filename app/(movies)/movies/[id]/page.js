@@ -16,11 +16,11 @@ export default async function MovieDetail({ params: { id } }) {
       <Suspense fallback={<h3>Loading movie info</h3>}>
         <MovieInfo id={id} />
       </Suspense>
-      <Suspense fallback={<h3>Loading movie Credits</h3>}>
-        <MovieCredits id={id} />
-      </Suspense>
       <Suspense fallback={<h3>Loading movie video</h3>}>
         <MovieVideos id={id} />
+      </Suspense>
+      <Suspense fallback={<h3>Loading movie Credits</h3>}>
+        <MovieCredits id={id} />
       </Suspense>
     </>
   );
