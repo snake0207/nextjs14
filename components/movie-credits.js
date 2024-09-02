@@ -17,21 +17,24 @@ function Credit({ profile_path, name }) {
 export default async function MovieCredits({ id }) {
   const credits = await getCredits(id);
 
+  console.log(JSON.stringify(credits));
+
   return (
-    <div className={styles.container}>
-      <h2>Credits</h2>
-      <div className={styles.credits}>
-        {credits.map(
-          (credit) =>
-            credit.profile_path && (
-              <Credit
-                key={credit.id}
-                profile_path={credit.profile_path}
-                name={credit.name}
-              />
-            )
-        )}
-      </div>
-    </div>
+    <>{JSON.stringify(credits)}</>
+    // <div className={styles.container}>
+    //   <h2>Credits</h2>
+    //   <div className={styles.credits}>
+    //     {credits.map(
+    //       (credit) =>
+    //         credit.profile_path && (
+    //           <Credit
+    //             key={credit.id}
+    //             profile_path={credit.profile_path}
+    //             name={credit.name}
+    //           />
+    //         )
+    //     )}
+    //   </div>
+    // </div>
   );
 }
