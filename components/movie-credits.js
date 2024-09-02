@@ -5,11 +5,11 @@ async function getCredits(id) {
   return await fetch(`${API_URL}/${id}/credits`).then((resp) => resp.json());
 }
 
-function Credit({ profile_path, name }) {
+function Credit({ path, name }) {
   return (
-    <div className={styles.person}>
-      <img src={profile_path} alt={name} />
-      <span className={styles.name}>{name}</span>
+    <div className={styles.credit}>
+      <img src={path} alt={name} />
+      <h5>{name}</h5>
     </div>
   );
 }
@@ -19,19 +19,16 @@ export default async function MovieCredits({ id }) {
 
   return (
     <div className={styles.container}>
-      <h2>Credits</h2>
-      <div className={styles.credits}>
-        {credits.map(
-          (credit) =>
-            credit.profile_path && (
-              <Credit
-                key={credit.id}
-                profile_path={credit.profile_path}
-                name={credit.name}
-              />
-            )
-        )}
-      </div>
+      {credits.map(
+        (credit) =>
+          credit.profile_path && (
+            <Credit
+              key={credit.id}
+              path={credit.profile_path}
+              name={credit.name}
+            />
+          )
+      )}
     </div>
   );
 }
