@@ -1,13 +1,30 @@
+.scroll {
+  width: 100vw;
+  margin: 100px 0 0;
+  display: flex;
+  white-space: nowrap;
+  overflow-x: auto !important;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   max-width: 80%;
   width: 100%;
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
 .credit {
   text-align: center;
   font-size: 14px;
+}
+
+.name {
+  padding: 16px 0;
 }
