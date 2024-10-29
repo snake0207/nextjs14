@@ -1,0 +1,40 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.back {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.poster {
+  border-radius: 20px;
+  max-width: 70%;
+  place-self: center;
+}
+
+.title {
+  color: white;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.overview {
+  color: gray;
+  margin-top: 20px;
+}
