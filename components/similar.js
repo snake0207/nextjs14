@@ -21,7 +21,7 @@ function Similar({ similar, onClick }) {
             {!similar.isFull
               ? similar.overview
                   .split(" ")
-                  .filter((ov, i) => i < 10)
+                  .filter((ov, i) => i < 20)
                   .join(" ")
               : similar.overview}
           </span>

@@ -22,24 +22,25 @@
   place-self: center;
 }
 
-.title {
-  height: 20%;
-  color: white;
-  font-size: 24px;
-  font-weight: 600;
-}
-
 .contents {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+.title {
+  margin-top: 20px;
+  height: 10%;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 .overview {
-  height: 60%;
+  height: 80%;
   color: gray;
   margin-top: 20px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .overview span:hover {
