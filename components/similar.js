@@ -13,20 +13,26 @@ function Similar({ similar, onClick }) {
         className={styles.poster}
       />
       <div className={styles.contents}>
-        <h5 className={styles.name}>
-          {similar.title} ({similar.id})
-        </h5>
-        <p className={styles.overview}>
-          {!similar.isFull
-            ? similar.overview
-                .split(" ")
-                .filter((ov, i) => i < 10)
-                .join(" ")
-            : similar.overview}
-        </p>
-        <span onClick={() => onClick(similar.id, !similar.isFull)}>
-          {!similar.isFull ? "전체" : "요약"}
-        </span>
+        <div className={styles.title}>
+          <h5>
+            {similar.title} ({similar.id})
+          </h5>
+        </div>
+        <div className={styles.overview}>
+          <div>
+            {!similar.isFull
+              ? similar.overview
+                  .split(" ")
+                  .filter((ov, i) => i < 10)
+                  .join(" ")
+              : similar.overview}
+          </div>
+        </div>
+        <div className={styles.full}>
+          <span onClick={() => onClick(similar.id, !similar.isFull)}>
+            {!similar.isFull ? "전체" : "요약"}
+          </span>
+        </div>
       </div>
     </div>
   );
@@ -41,13 +47,14 @@ export default function SimilarLayout({ id, similars = [] }) {
 
   function onClick(sid, isFull) {
     console.log(sid, isFull);
-    const _datas = datas.map(d => {
-      if (d.id === sid) {
-        return {...d, isFull: isFull};
-      }
-      return {...d};
-    });
-    setDatas(_datas);
+    setDatas(
+      datas.map((d) => {
+        if (d.id === sid) {
+          return { ...d, isFull: isFull };
+        }
+        return d;
+      })
+    );
   }
 
   return (

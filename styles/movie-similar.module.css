@@ -23,8 +23,9 @@
 }
 
 .title {
+  height: 20%;
   color: white;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 600;
 }
 
@@ -35,6 +36,16 @@
 }
 
 .overview {
+  height: 70%;
   color: gray;
   margin-top: 20px;
+  overflow-y: scroll;
+}
+
+.full {
+  height: 10%;
+  color: yellow;
+  opacity: 0.5;
+  font-size: 16px;
+  text-align: right;
 }
