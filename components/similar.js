@@ -39,7 +39,6 @@ export default function SimilarLayout({ id, similars = [] }) {
   }, []);
 
   function onClick(sid, isFull) {
-    console.log(sid, isFull);
     setDatas(
       datas.map((d) => {
         if (d.id === sid) {
