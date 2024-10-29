@@ -14,9 +14,7 @@ function Similar({ similar, onClick }) {
       />
       <div className={styles.contents}>
         <div className={styles.title}>
-          <h5>
-            {similar.title} ({similar.id})
-          </h5>
+          <h5>{similar.title}</h5>
         </div>
         <div className={styles.overview}>
           <span onClick={() => onClick(similar.id, !similar.isFull)}>
