@@ -19,18 +19,13 @@ function Similar({ similar, onClick }) {
           </h5>
         </div>
         <div className={styles.overview}>
-          <div>
+          <span onClick={() => onClick(similar.id, !similar.isFull)}>
             {!similar.isFull
               ? similar.overview
                   .split(" ")
                   .filter((ov, i) => i < 10)
                   .join(" ")
               : similar.overview}
-          </div>
-        </div>
-        <div className={styles.full}>
-          <span onClick={() => onClick(similar.id, !similar.isFull)}>
-            {!similar.isFull ? "전체" : "요약"}
           </span>
         </div>
       </div>

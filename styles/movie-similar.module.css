@@ -36,16 +36,13 @@
 }
 
 .overview {
-  height: 70%;
+  height: 60%;
   color: gray;
   margin-top: 20px;
   overflow-y: scroll;
 }
 
-.full {
-  height: 10%;
+.overview span:hover {
   color: yellow;
-  opacity: 0.5;
-  font-size: 16px;
-  text-align: right;
+  cursor: pointer;
 }
