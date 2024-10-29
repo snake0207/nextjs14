@@ -12,7 +12,7 @@ export default function Navigation() {
       <ul>
         <li>
           <Link href="/">Home</Link>
-          {path === "/" ? "🔥" : ""}
+          {path === "/" || path.includes("/movies") ? "🔥" : ""}
         </li>
         <li>
           <Link href={{ pathname: "/about" }}>About Us</Link>
